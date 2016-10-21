@@ -1,0 +1,46 @@
+---
+title: "Course Summary"
+author: "Matt"
+date: "October 21, 2016"
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+## Day 1: Packages and Version Control
+
+We learned to create a package using [devtools][1]. The way to get started is to create the skeleton of a package
+```
+library(devtools)
+create("Elbo")
+```
+This creates a directory with a couple files and a folder.
+We then did the following:
+
+1. The DESCRIPTION contains info about the package; we edited it for our purposes.
+2. We looked at the NAMESPACE, but didn't modify it.
+3. We created our first function in the R folder, `hi()`.
+
+We then used [roxygen2][] to add documentation to the function,
+
+manage source code using [github][].
+
+```{r simple-example}
+1+1
+```
+
+```{python hello}
+print('hello')
+```
+
+```{r elbohi}
+setwd("/home/mattnlana/Desktop")
+devtools::install("Elbo")
+library(Elbo)
+hi("Martin")
+```
+
+[1]:https://cran.r-project.org/package=devtools
+[roxygen2]://cran.r-project.org/package=roxygen2
+[github]://
